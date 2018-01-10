@@ -1,0 +1,92 @@
+body{
+	background-image: url("../images/backimage.png");
+	font-family: 'Joti One', cursive;
+	margin: 15px 10px;
+}
+
+#header{
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+#header h2{
+	font-family: inherit;
+	text-align: center;
+	width: 100%;
+	color: orange;
+	font-size: 35px;
+}
+
+#main-grid{
+	display: grid;
+	grid-template-columns: 1fr repeat(3, 3fr) 1fr;
+	grid-auto-rows: minmax(50px, auto);
+	grid-gap: 10px;
+	justify-content: center;
+	grid-template-areas: 
+	". game-msg-1 game-msg-1 game-msg-1 ."
+	". game-msg-2 game-msg-2 game-msg-2 ."
+	". player-1 game-stat player-2 ."
+	". chat-disp chat-disp chat-disp .";
+}
+
+#game-msg-1{
+	grid-area: game-msg-1;
+	border: 2px solid green;
+	text-align: center;
+	width: 100%;
+}
+
+#startNewGame{
+	 
+}
+
+#startButton{
+	width: 80px;
+	font-family: inherit;
+	font-size: 18px;
+}
+
+#playerName{
+	width: 300px;
+	font-family: inherit;
+	font-size: 18px;
+}
+
+#game-msg-2{
+	grid-area: game-msg-2;
+	border: 2px solid green;
+}
+
+#player-1{
+	grid-area: player-1;
+	border: 2px solid green;
+	height: 200px;
+	text-align: center;
+	position: relative;
+}
+
+#player-2{
+	grid-area: player-2;
+	border: 2px solid green;
+	height: 200px;
+	text-align: center;
+	position: relative;
+}
+
+#waitingPlayer1, #waitingPlayer2{
+	color: orange;
+	font-size: 22px;
+}
+
+
+#game-stat{
+	grid-area: game-stat;
+	border: 2px solid green;
+}
+
+#chat-disp{
+	grid-area: chat-disp;
+	border: 2px solid green;
+	text-align:  center;
+}

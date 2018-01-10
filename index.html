@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    	<title>Online multiplayer game of Rock, Paper & Scissors</title>
+        <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/javascript/rpsmultiplayer.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
+        <link href="https://fonts.googleapis.com/css?family=Joti+One" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+		<header>
+			<div id="header">
+				<h2> ROCK, PAPER & SCISSORS </h2>
+			</div>
+		</header>
+
+		<section>
+			<div id="main-grid">
+				<div id="game-msg-1">
+					<div id="startNewGame">
+						<input type=text placeholder="Your Name" id="playerName">
+						<button id="startButton">Start</button>
+					</div>
+				</div>
+				<div id="game-msg-2">
+					
+				</div>
+				<div id="player-1">
+					<h2 id="waitingPlayer1"> Waiting for Player 1 </h2>
+				</div>
+				<div id="player-2">
+					<h2 id="waitingPlayer2"> Waiting for Player 2 </h2>
+				</div>
+				<div id="game-stat">
+					
+				</div>
+				<div id="chat-disp">
+					<textarea id="chatArea" rows="10" cols="100">
+
+					</textarea>
+					<br>
+					<input type="text" id="textMessage" placeholder="Type new message" size=92>
+					<button id="sendMessage">Send</button>
+
+				</div>
+			</div>
+		</section>
+    </body>
+</html>
