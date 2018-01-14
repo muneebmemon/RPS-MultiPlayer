@@ -32,13 +32,13 @@ body{
 
 #game-msg-1{
 	grid-area: game-msg-1;
-	border: 2px solid green;
 	text-align: center;
 	width: 100%;
 }
 
-#startNewGame{
-	 
+#game-msg-1 h1{
+	color: yellow;
+	font-size: 25px;
 }
 
 #startButton{
@@ -55,7 +55,12 @@ body{
 
 #game-msg-2{
 	grid-area: game-msg-2;
-	border: 2px solid green;
+	text-align: center;
+}
+
+#game-msg-2-h1{
+	color: floralwhite;
+	font-size: 20px;
 }
 
 #player-1{
@@ -74,7 +79,28 @@ body{
 	position: relative;
 }
 
-#waitingPlayer1, #waitingPlayer2{
+#playerOneH3, #playerTwoH3{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	margin:  0px auto;
+	font-family: inherit;
+	font-size: 15px;
+	color: yellow;
+}
+
+#playerOneH2, #playerOneH4, #playerOneH5, #playerTwoH2, #playerTwoH4, #playerTwoH5{
+	color: floralwhite;
+	font-size: 25px;
+	margin: 20px auto;
+}
+
+.choices{
+	cursor: pointer;
+}
+
+#playerOneH1, #playerTwoH1{
 	color: orange;
 	font-size: 22px;
 }
@@ -82,10 +108,151 @@ body{
 #game-stat{
 	grid-area: game-stat;
 	border: 2px solid green;
+	font-family: inherit;
+	font-size: 50px;
+	color: yellow;
+	text-align: center;
+	padding-top: 60px;
 }
 
 #chat-disp{
 	grid-area: chat-disp;
-	border: 2px solid green;
 	text-align:  center;
 }
+
+#chatArea{
+	width: 720px;
+}
+
+#textMessage{
+	width: 675px;
+}
+
+#sendMessage{
+
+}
+
+
+@media screen and (max-width:932px){
+	#chatArea{
+		width: 500px;
+	}
+
+	#textMessage{
+		width: 455px;
+	}
+}
+
+@media screen and (max-width:665px){
+	#chatArea{
+		width: 450px;
+	}
+
+	#textMessage{
+		width: 405px;
+	}
+}
+
+@media screen and (max-width:601px){
+	#chatArea{
+		width: 350px;
+	}
+
+	#textMessage{
+		width: 305px;
+	}
+}
+
+@media screen and (max-width:481px){
+
+	#main-grid{
+	display: grid;
+	grid-template-columns: 1fr repeat(3, 3fr) 1fr;
+	grid-auto-rows: minmax(20px, auto);
+	grid-gap: 10px;
+	justify-content: center;
+	grid-template-areas: 
+	". game-msg-1 game-msg-1 game-msg-1 ."
+	". game-msg-2 game-msg-2 game-msg-2 ."
+	". player-1 game-stat player-2 ."
+	". chat-disp chat-disp chat-disp .";
+}
+	#chatArea{
+		width: 250px;
+	}
+
+	#textMessage{
+		width: 205px;
+	}
+
+	#game-msg-1 h1{
+	color: yellow;
+	font-size: 12px;
+}
+
+#startButton{
+	width: 40px;
+	font-family: inherit;
+	font-size: 10px;
+}
+
+#playerName{
+	width: 200px;
+	font-family: inherit;
+	font-size: 10px;
+}
+
+
+#game-msg-2-h1{
+	color: floralwhite;
+	font-size: 12px;
+}
+
+#playerOneH3, #playerTwoH3{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	margin:  0px auto;
+	font-family: inherit;
+	font-size: 15px;
+	color: yellow;
+}
+
+#playerOneH2, #playerOneH4, #playerOneH5, #playerTwoH2, #playerTwoH4, #playerTwoH5{
+	color: floralwhite;
+	font-size: 15px;
+	margin: 20px auto;
+}
+
+.choices{
+	cursor: pointer;
+}
+
+#playerOneH1, #playerTwoH1{
+	color: orange;
+	font-size: 15px;
+}
+
+#game-stat{
+	grid-area: game-stat;
+	border: 2px solid green;
+	font-family: inherit;
+	font-size: 20px;
+	color: yellow;
+	text-align: center;
+	padding-top: 40px;
+}
+
+#header h2{
+	font-family: inherit;
+	text-align: center;
+	width: 100%;
+	color: orange;
+	font-size: 25px;
+}
+
+}
+
+
+

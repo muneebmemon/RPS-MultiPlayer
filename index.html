@@ -14,6 +14,7 @@
 		<header>
 			<div id="header">
 				<h2> ROCK, PAPER & SCISSORS </h2>
+				<hr size=-1>
 			</div>
 		</header>
 
@@ -26,25 +27,33 @@
 					</div>
 				</div>
 				<div id="game-msg-2">
-					
+					<h2 id="game-msg-2-h1">Please enter your name and hit START to play game.</h2>
 				</div>
 				<div id="player-1">
-					<h2 id="waitingPlayer1"> Waiting for Player 1 </h2>
+					<h1 id="playerOneH1"></h1>
+					<h2 id="playerOneH2"></h2>
+					<h2 id="playerOneH4"></h2>
+					<h2 id="playerOneH5"></h2>
+					<h3 id="playerOneH3"></h3>
 				</div>
 				<div id="player-2">
-					<h2 id="waitingPlayer2"> Waiting for Player 2 </h2>
+					<h1 id="playerTwoH1"></h1>
+					<h2 id="playerTwoH2"></h2>
+					<h2 id="playerTwoH4"></h2>
+					<h2 id="playerTwoH5"></h2>
+					<h2 id="playerTwoH3"></h2>
 				</div>
 				<div id="game-stat">
 					
 				</div>
 				<div id="chat-disp">
-					<textarea id="chatArea" rows="10" cols="100">
+					<textarea id="chatArea" rows="10">
 
 					</textarea>
 					<br>
 					<form>
-						<input type="text" id="textMessage" placeholder="Type new message" size=92>
-						<input type="submit" id="sendMessage" value="Send">
+						<input type="text" id="textMessage" placeholder="Type new message">
+						<input type="submit" id="sendMessage" value="Send" disabled>
 					</form>
 				</div>
 			</div>
