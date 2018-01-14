@@ -128,6 +128,36 @@ $(function() {
 		}
 	}
 
+	$("#refresh").on("click", function(){
+		playerTwoRef.set({
+			choice: "undefined",
+			loses: 0,
+			wins: 0,
+			name: "undefined"
+		});
+
+		playerOneRef.set({
+			choice: "undefined",
+			loses: 0,
+			wins: 0,
+			name: "undefined"
+		});		
+
+		turnRef.set({
+			turn: 0
+		});
+
+		curWin.set({
+			currentWin: -1
+		});
+
+		totalPlayerRef.set({
+			totalPlayers: 0
+		});
+		sessionStorage.removeItem("playerName");
+		location.reload(true);
+	});
+
 	//This event is occured when player starts game by clicking start button
 	$("#startButton").on("click", function(){
 
