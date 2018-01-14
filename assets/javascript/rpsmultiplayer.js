@@ -381,6 +381,7 @@ $(function() {
 				$("#playerTwoH5").text(".");
 			});
 			intervalVar = setTimeout(startNewGame, 4000);
+			new Audio('assets/sounds/gutsman.mp3').play();
 		}
 
 		if (snap.val().currentWin==2){
@@ -398,6 +399,7 @@ $(function() {
 				$("#playerTwoH5").text(".");
 			});
 			intervalVar = setTimeout(startNewGame, 4000);
+			new Audio('assets/sounds/gutsman.mp3').play();
 		}
 
 		if (snap.val().currentWin==0){
@@ -414,6 +416,7 @@ $(function() {
 				$("#playerTwoH5").text(".");
 			});
 			intervalVar = setTimeout(startNewGame, 4000);
+			new Audio('assets/sounds/gutsman.mp3').play();
 		}
 	});
 
@@ -451,6 +454,9 @@ $(function() {
 	chatRef.on("value", function(snapshot) {
 		var newLine = "\r\n";
 		var chatMsg = snapshot.val().chatmsg;
+		if(!chatMsg.includes(playerName)){
+			new Audio('assets/sounds/stairs.mp3').play();
+		}
 		var chatText = chatArea.val();
 		chatArea.val(chatText + newLine + chatMsg);
 		chatRef.set({
