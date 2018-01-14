@@ -454,12 +454,10 @@ $(function() {
 	chatRef.on("value", function(snapshot) {
 		var newLine = "\r\n";
 		var chatMsg = snapshot.val().chatmsg;
-		if(!chatMsg.includes(sessionStorage.getItem("playerName")){
-			new Audio('assets/sounds/stairs.mp3').play();
-		}
+		new Audio('assets/sounds/stairs.mp3').play();
 		var chatText = chatArea.val();
 		chatArea.val(chatText + newLine + chatMsg);
-		chatArea.scrollTop(chatArea.scrollHeight);
+		chatArea.scrollTop(chatArea[0].scrollHeight);
 		chatRef.set({
 		 	chatmsg: " "
 		 });
